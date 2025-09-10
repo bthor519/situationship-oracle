@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy - Situationship Oracle</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Situationship Oracle — Official Site</title>
+  <meta name="description" content="Situationship Oracle — get clarity with a single tap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #11161c;
+      --text: #eaf1f9;
+      --muted: #a8b3c2;
+      --brand: #6aa8ff;
+      --ring: rgba(106,168,255,.35);
+      --border: #1d2631;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.5; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo { width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,#6aa8ff, #8f7bff); box-shadow: 0 0 0 6px var(--ring); }
+    nav a { margin-left:16px; color:var(--muted); font-weight:600; }
+    nav a:hover { color: var(--text); }
+    .hero { margin:48px 0 28px; padding:28px; background:linear-gradient(180deg,rgba(106,168,255,.08),transparent); border:1px solid var(--border); border-radius:20px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin:0 0 12px; }
+    .sub { color: var(--muted); font-size: clamp(14px, 2vw, 18px); }
+    .cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:12px 16px; background:var(--brand); color:#041320; border-radius:12px; font-weight:800; border:1px solid rgba(255,255,255,.08); }
+    .btn.ghost { background:transparent; color:var(--text); border-color:var(--border); }
+    .grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px; margin-top:28px; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; }
+    .card h3 { margin:0 0 6px; font-size:18px; }
+    .card p { margin:0; color: var(--muted); font-size:14px; }
+    footer { margin-top:42px; padding-top:20px; border-top:1px solid var(--border); color:var(--muted); display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; }
+    .links a { margin-right:14px; }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items:flex-start; gap:8px; }
+      nav { margin-top:8px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy for Situationship Oracle</h1>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <strong>Situationship Oracle</strong>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
 
-  <p>Situationship Oracle is committed to protecting your privacy. This app does not collect, store, or share personal information such as your name, email address, phone number, or location.</p>
+    <section class="hero">
+      <h1>Clarity for modern relationships.</h1>
+      <p class="sub">One tap. One answer. No sign-up. No data collection. Just a quick nudge toward your next move.</p>
+      <div class="cta">
+        <!-- Replace the # with your App Store URL after approval -->
+        <a class="btn" href="#">Get on the App Store</a>
+        <a class="btn ghost" href="support.html">Contact Support</a>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Instant Guidance</h3>
+          <p>Short, actionable answers—no endless scrolling or decision fatigue.</p>
+        </div>
+        <div class="card">
+          <h3>Respectfully Private</h3>
+          <p>No account required. We don’t link data to you. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+        <div class="card">
+          <h3>iPhone & iPad</h3>
+          <p>Optimized for iOS and iPadOS with native feeling interactions.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Advertising</h2>
-  <p>Situationship Oracle uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use certain data, such as device identifiers or advertising interactions, to serve relevant ads. This data is processed by Google in accordance with their <a href="https://policies.google.com/technologies/ads">Advertising Policies</a>.</p>
-
-  <h2>Data We Do Not Collect</h2>
-  <p>The app does not collect:</p>
-  <ul>
-    <li>Names, email addresses, phone numbers, or other contact information</li>
-    <li>Health or fitness information</li>
-    <li>Financial information</li>
-    <li>Precise or coarse location data</li>
-    <li>Photos, videos, audio, or other user content</li>
-    <li>Browsing history, search history, or identifiers linked to you</li>
-  </ul>
-
-  <h2>Children’s Privacy</h2>
-  <p>This app is not directed toward children under 13. Google AdMob provides tools to ensure ads comply with applicable child privacy regulations such as COPPA.</p>
-
-  <h2>Changes to This Policy</h2>
-  <p>We may update this privacy policy from time to time. Any changes will be reflected on this page.</p>
-
-<h2>Contact Us</h2>
-<p>
-  If you have any questions or concerns about this Privacy Policy, please contact us at 
-  <a href="mailto:bthor519@gmail.com">bthor519@gmail.com</a>.
-</p>
+    <footer>
+      <div>© <span id="y"></span> Situationship Oracle</div>
+      <div class="links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
