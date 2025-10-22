@@ -1,59 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Situationship Oracle – Privacy Policy</title>
+  <meta charset="utf-8" />
+  <title>Situationship Oracle — Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy policy for Situationship Oracle." />
+  <link rel="icon" href="./favicon.ico" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      color: #6c2eb9;
-    }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
+    :root { --bg:#fff; --ink:#1f2937; --muted:#6b7280; --brand:#6b5bff; --card:#f7f4ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { border-bottom: 1px solid #eee; background:#fff; position: sticky; top:0; z-index: 10; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .brand { font-weight: 800; }
+    .links a { margin-left: 14px; padding: 8px 10px; border-radius: 8px; }
+    .active { background: var(--card); text-decoration: none; }
+    main { padding: 24px 0 36px; }
+    h1 { margin-top: 16px; }
+    h2 { margin-top: 24px; }
+    p, li { line-height: 1.6; color: var(--ink); }
+    .muted { color: var(--muted); }
+    footer { border-top:1px solid #eee; margin-top: 32px; }
+    .foot { padding: 20px 0; font-size: 14px; color: var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Privacy Policy</h1>
-    <p><em>Situationship Oracle</em></p>
+    <div class="wrap nav">
+      <div class="brand">Situationship Oracle</div>
+      <nav class="links">
+        <a href="./">Home</a>
+        <a class="active" href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+        <a href="./marketing.html">Marketing</a>
+      </nav>
+    </div>
   </header>
 
-  <p>Situationship Oracle values your privacy. This app does not collect or share personally identifiable information. The only third-party service used is Google AdMob, which may use data such as your device’s advertising identifier to provide personalized ads.</p>
+  <main class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: <span id="date"></span></p>
 
-  <h2>What Data Is Collected</h2>
-  <p>Situationship Oracle itself does not collect personal data. However, Google AdMob may collect anonymous identifiers for the purpose of showing relevant ads.</p>
+    <h2>Overview</h2>
+    <p>Situationship Oracle is an entertainment app. We don’t offer medical, legal, or professional advice. We use advertising to keep the app free.</p>
 
-  <h2>How Data Is Used</h2>
-  <p>Any data collected by Google AdMob is used strictly for advertising purposes, in accordance with their policies.</p>
+    <h2>Data we collect</h2>
+    <ul>
+      <li><strong>App analytics</strong> (crash logs, performance, usage metrics) to improve the app.</li>
+      <li><strong>Advertising data</strong> from our ad partners to show ads and measure performance.</li>
+    </ul>
 
-  <h2>Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at 
-    <a href="mailto:situationshiporacle@gmail.com">situationshiporacle@gmail.com</a>.</p>
-  <p><em>For business inquiries (including partnerships or acquisitions), please use the same email.</em></p>
+    <h2>Advertising & tracking (iOS)</h2>
+    <p>On iOS, Apple’s App Tracking Transparency (ATT) controls access to the advertising identifier (IDFA). If you allow tracking, ads may be more relevant; if you don’t, you’ll still see non-personalized ads.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>Change iOS tracking permission anytime: <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em>.</li>
+      <li>Region-specific consent (e.g., EEA/UK) may be managed via additional prompts if shown.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Questions or requests? <a href="./support.html">Visit Support</a>.</p>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Situationship Oracle. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="support.html">Support</a> | 
-      <a href="marketing.html">Marketing</a>
-    </p>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Situationship Oracle</div>
+      <div><a href="./">Home</a> · <a href="./support.html">Support</a></div>
+    </div>
   </footer>
+  <script>
+    const d = new Date();
+    document.getElementById('year').textContent = d.getFullYear();
+    document.getElementById('date').textContent = d.toLocaleDateString();
+  </script>
 </body>
 </html>
