@@ -1,62 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Situationship Oracle – Support</title>
+  <meta charset="utf-8" />
+  <title>Situationship Oracle — Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support for Situationship Oracle." />
+  <link rel="icon" href="./favicon.ico" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      color: #6c2eb9;
-    }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
+    :root { --bg:#fff; --ink:#1f2937; --muted:#6b7280; --brand:#6b5bff; --card:#f7f4ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { border-bottom: 1px solid #eee; background:#fff; position: sticky; top:0; z-index: 10; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .brand { font-weight: 800; }
+    .links a { margin-left: 14px; padding: 8px 10px; border-radius: 8px; }
+    .active { background: var(--card); text-decoration: none; }
+    main { padding: 24px 0 36px; }
+    .card { background: var(--card); border: 1px solid #ece7ff; border-radius: 16px; padding: 16px; }
+    h1 { margin-top: 16px; }
+    h2 { margin-top: 24px; }
+    p, li { line-height: 1.6; color: var(--ink); }
+    footer { border-top:1px solid #eee; margin-top: 32px; }
+    .foot { padding: 20px 0; font-size: 14px; color: var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Support</h1>
-    <p><em>Situationship Oracle</em></p>
+    <div class="wrap nav">
+      <div class="brand">Situationship Oracle</div>
+      <nav class="links">
+        <a href="./">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a class="active" href="./support.html">Support</a>
+        <a href="./marketing.html">Marketing</a>
+      </nav>
+    </div>
   </header>
 
-  <p>Need help with the app? We’re here for you.</p>
+  <main class="wrap">
+    <h1>Support</h1>
 
-  <h2>Contact Support</h2>
-  <p>Email us anytime at 
-    <a href="mailto:situationshiporacle@gmail.com">situationshiporacle@gmail.com</a>.</p>
+    <section class="card">
+      <h2 style="margin-top:0;">Contact us</h2>
+      <!-- Replace the mailto with your support address -->
+      <p>Email: <a href="mailto:support@yoursite.example">support@yoursite.example</a></p>
+      <p>Response time: within 3–5 business days.</p>
+    </section>
 
-  <h2>Business Inquiries</h2>
-  <p>For business opportunities, partnerships, or acquisitions, please also use the same email.</p>
-
-  <h2>FAQs</h2>
-  <ul>
-    <li><strong>The app isn’t loading?</strong> Try closing and reopening the app, or check for updates in the App Store.</li>
-    <li><strong>Ads feel disruptive?</strong> We’re constantly working on improving the ad experience. Please let us know if you encounter issues.</li>
-    <li><strong>Other problems?</strong> Reach out via email and we’ll respond as soon as possible.</li>
-  </ul>
+    <section>
+      <h2>FAQ</h2>
+      <details>
+        <summary>The app shows ads — can I turn off personalized ads?</summary>
+        <p>Yes. On iOS, go to <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em> to change your preference. You’ll still see ads; they just won’t be personalized.</p>
+      </details>
+      <details>
+        <summary>Is this professional advice?</summary>
+        <p>No. Situationship Oracle is for entertainment purposes only.</p>
+      </details>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Situationship Oracle. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="support.html">Support</a> | 
-      <a href="marketing.html">Marketing</a>
-    </p>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Situationship Oracle</div>
+      <div><a href="./">Home</a> · <a href="./privacy.html">Privacy</a></div>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
