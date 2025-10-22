@@ -1,63 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Situationship Oracle – Official App</title>
+  <meta charset="utf-8" />
+  <title>Situationship Oracle — Marketing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn more about Situationship Oracle’s features and vibe." />
+  <link rel="icon" href="./favicon.ico" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    header {
-      margin-bottom: 40px;
-    }
-    h1 {
-      color: #6c2eb9;
-    }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
+    :root { --bg:#fff; --ink:#1f2937; --muted:#6b7280; --brand:#6b5bff; --card:#f7f4ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { border-bottom: 1px solid #eee; background:#fff; position: sticky; top:0; z-index: 10; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .brand { font-weight: 800; }
+    .links a { margin-left: 14px; padding: 8px 10px; border-radius: 8px; }
+    .active { background: var(--card); text-decoration: none; }
+    .section { padding: 28px 0; }
+    .hero h1 { margin: 16px 0 6px; font-size: clamp(24px, 3.6vw, 38px); }
+    .sub { color:var(--muted); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+    .card { background: var(--card); border: 1px solid #ece7ff; border-radius: 16px; padding: 16px; }
+    footer { border-top:1px solid #eee; margin-top: 32px; }
+    .foot { padding: 20px 0; font-size: 14px; color: var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>✨ Situationship Oracle ✨</h1>
-    <p>Your playful guide to decoding love and life.</p>
+    <div class="wrap nav">
+      <div class="brand">Situationship Oracle</div>
+      <nav class="links">
+        <a href="./">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+        <a class="active" href="./marketing.html">Marketing</a>
+      </nav>
+    </div>
   </header>
 
-  <h2>About the App</h2>
-  <p>Ask the Oracle your burning questions and receive fun, thoughtful insights designed to help you reflect, laugh, and navigate your situationships with ease.</p>
+  <main class="wrap">
+    <section class="section hero">
+      <h1>Why people like it</h1>
+      <p class="sub">Crisp answers. Playful tone. No fluff.</p>
+    </section>
 
-  <h2>Features</h2>
-  <ul style="list-style: none; padding: 0;">
-    <li>🔮 Pull playful Oracle readings</li>
-    <li>❤️ Explore insights about your love life</li>
-    <li>📱 Clean, simple design</li>
-  </ul>
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <h3>Short & direct</h3>
+          <p>Answers land in 1–3 sentences so you can decide and move on.</p>
+        </div>
+        <div class="card">
+          <h3>PG-13 & playful</h3>
+          <p>The Oracle avoids lectures and moralizing. It’s entertainment—enjoy it.</p>
+        </div>
+        <div class="card">
+          <h3>Free via ads</h3>
+          <p>We keep it free with ads. You can control personalization in iOS.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Download</h2>
-  <p><em>Available soon on the App Store!</em></p>
-
-  <h2>Contact</h2>
-  <p>Email us at <a href="mailto:situationshiporacle@gmail.com">situationshiporacle@gmail.com</a></p>
-  <p><em>For support or business inquiries, use the same contact.</em></p>
+    <section class="section">
+      <div class="card">
+        <h3 style="margin-top:0;">Coming soon</h3>
+        <ul>
+          <li>Streaks and favorites</li>
+          <li>Alternate “voices” for different moods</li>
+          <li>Shareable posters</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Situationship Oracle. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="support.html">Support</a> | 
-      <a href="marketing.html">Marketing</a>
-    </p>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Situationship Oracle</div>
+      <div><a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a></div>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
